@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AB Glamss | Luxury Women's Fashion, London — Essentials Elegance</title>
+<meta name="description" content="AB Glamss is a London luxury fashion house for the modern woman. Discover premium dresses, eveningwear, handbags and accessories crafted for essential elegance.">
+<meta name="keywords" content="luxury fashion UK, AB Glamss, luxury dresses, eveningwear, designer handbags, London fashion brand">
+<link rel="canonical" href="https://www.abglamss.com/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="AB Glamss | Essentials Elegance — YOU">
+<meta property="og:description" content="London luxury fashion house. Discover the new collection at AB Glamss.">
+<meta property="og:image" content="https://www.abglamss.com/assets/images/og-cover.jpg">
+<meta property="og:url" content="https://www.abglamss.com/">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AB Glamss | Essentials Elegance — YOU">
+<meta name="twitter:description" content="London luxury fashion house. Discover the new collection at AB Glamss.">
+
+<!-- Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ClothingStore",
+  "name": "AB Glamss",
+  "slogan": "Essentials Elegance — YOU",
+  "url": "https://www.abglamss.com",
+  "telephone": "+44 7544 557811",
+  "address": { "@type": "PostalAddress", "addressCountry": "UK" },
+  "sameAs": [
+    "https://www.instagram.com/ab.glamss",
+    "https://www.tiktok.com/@ab.glamss",
+    "https://www.facebook.com/ABGlamss"
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          ink: '#0D0D0D',
+          gold: '#D4AF37',
+          goldDeep: '#A9822C',
+          goldPale: '#E7CD7A',
+          cream: '#F8F6F1',
+          card: '#EFEAE0',
+        },
+        fontFamily: {
+          display: ['"Playfair Display"', 'serif'],
+          body: ['Poppins', 'sans-serif'],
+        },
+        letterSpacing: { widest2: '.35em' },
+      }
+    }
+  }
+</script>
+
+<style>
+  :root{ --gold:#D4AF37; --gold-deep:#A9822C; --ink:#0D0D0D; --cream:#F8F6F1; }
+  *{ scroll-behavior:smooth; }
+  body{ background:var(--cream); font-family:'Poppins',sans-serif; color:var(--ink); }
+  h1,h2,h3,h4,.font-display{ font-family:'Playfair Display',serif; }
+
+  ::selection{ background:var(--gold); color:#fff; }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar{ width:9px; }
+  ::-webkit-scrollbar-track{ background:var(--cream); }
+  ::-webkit-scrollbar-thumb{ background:linear-gradient(180deg,#D4AF37,#A9822C); border-radius:10px; }
+
+  /* Loader */
+  #loader{ position:fixed; inset:0; background:var(--ink); z-index:9999; display:flex; align-items:center; justify-content:center; }
+  #loader .monogram{ font-family:'Playfair Display',serif; font-size:3.4rem; color:var(--gold); letter-spacing:.15em; opacity:0; }
+  #loader .rule{ width:0; height:1px; background:var(--gold); margin-top:14px; }
+
+  /* Nav */
+  #mainNav{ transition: background-color .5s ease, box-shadow .5s ease, padding .4s ease; }
+  #mainNav.scrolled{ background-color:rgba(13,13,13,0.94); box-shadow:0 8px 30px rgba(0,0,0,.25); }
+  .nav-link{ position:relative; }
+  .nav-link::after{ content:''; position:absolute; left:0; bottom:-6px; width:0; height:1px; background:var(--gold); transition:width .35s ease; }
+  .nav-link:hover::after{ width:100%; }
+
+  /* Gold gradient text */
+  .gold-text{ background:linear-gradient(120deg,#D4AF37,#F3E3A8 45%,#A9822C); -webkit-background-clip:text; background-clip:text; color:transparent; }
+
+  /* Buttons */
+  .btn-gold{ background:linear-gradient(120deg,#D4AF37,#C29A34); color:#0D0D0D; }
+  .btn-gold:hover{ background:linear-gradient(120deg,#E7CD7A,#D4AF37); }
+  .btn-outline{ border:1px solid var(--gold); color:var(--cream); }
+  .btn-outline:hover{ background:var(--gold); color:#0D0D0D; }
+
+  .ripple{ position:relative; overflow:hidden; }
+  .ripple span.rip{ position:absolute; border-radius:50%; transform:scale(0); background:rgba(255,255,255,.55); animation:ripple .6s linear; pointer-events:none; }
+  @keyframes ripple{ to{ transform:scale(3); opacity:0; } }
+
+  /* Section eyebrow */
+  .eyebrow{ letter-spacing:.35em; font-size:.7rem; }
+
+  /* Cards */
+  .lux-card{ transition: transform .55s cubic-bezier(.16,1,.3,1), box-shadow .55s ease; }
+  .lux-card:hover{ transform: translateY(-10px); box-shadow: 0 30px 60px -20px rgba(13,13,13,.35); }
+  .img-zoom{ overflow:hidden; }
+  .img-zoom img{ transition: transform 1s cubic-bezier(.16,1,.3,1), filter .6s ease; }
+  .img-zoom:hover img{ transform: scale(1.08); }
+
+  .duo{ filter: grayscale(45%) sepia(12%) contrast(1.05); }
+
+  /* Floating */
+  .float-slow{ animation: floaty 7s ease-in-out infinite; }
+  .float-slow2{ animation: floaty 9s ease-in-out infinite 1.5s; }
+  @keyframes floaty{ 0%,100%{ transform:translateY(0);} 50%{ transform:translateY(-16px);} }
+
+  /* Divider */
+  .gold-divider{ height:1px; background:linear-gradient(90deg, transparent, var(--gold), transparent); }
+
+  /* Marquee watermark */
+  .watermark{ font-family:'Playfair Display',serif; font-size:14vw; line-height:1; color:transparent; -webkit-text-stroke:1px rgba(212,175,55,.18); user-select:none; }
+
+  /* Cursor dot */
+  #cursorDot{ position:fixed; top:0; left:0; width:8px; height:8px; background:var(--gold); border-radius:50%; pointer-events:none; z-index:9998; transform:translate(-50%,-50%); transition: opacity .3s; mix-blend-mode:difference; }
+  #cursorRing{ position:fixed; top:0; left:0; width:34px; height:34px; border:1px solid var(--gold); border-radius:50%; pointer-events:none; z-index:9998; transform:translate(-50%,-50%); transition: width .25s, height .25s, opacity .3s; }
+  @media (hover:none){ #cursorDot, #cursorRing{ display:none; } }
+
+  /* Testimonial */
+  .swiper-pagination-bullet{ background:var(--gold) !important; opacity:.4; }
+  .swiper-pagination-bullet-active{ opacity:1 !important; }
+
+  /* Glass */
+  .glass{ background:rgba(255,255,255,.08); backdrop-filter: blur(14px); border:1px solid rgba(212,175,55,.25); }
+
+  /* Reduced motion */
+  @media (prefers-reduced-motion: reduce){
+    *{ animation-duration:.001ms !important; animation-iteration-count:1 !important; transition-duration:.001ms !important; scroll-behavior:auto !important; }
+  }
+
+  input:focus-visible, button:focus-visible, a:focus-visible{ outline:2px solid var(--gold); outline-offset:3px; }
+</style>
+</head>
+<body class="antialiased overflow-x-hidden">
+
+<!-- Loader -->
+<div id="loader" aria-hidden="true">
+  <div class="text-center">
+    <div class="monogram" id="loaderMark">AB</div>
+    <div class="rule mx-auto" id="loaderRule"></div>
+  </div>
+</div>
+
+<!-- Custom cursor -->
+<div id="cursorDot"></div>
+<div id="cursorRing"></div>
+
+<!-- ============ NAV ============ -->
+<header id="mainNav" class="fixed top-0 left-0 w-full z-50 py-5">
+  <nav class="max-w-[1440px] mx-auto px-6 lg:px-12 flex items-center justify-between">
+    <a href="#home" class="font-display text-2xl tracking-widest text-cream" aria-label="AB Glamss home">
+      AB <span class="gold-text">Glamss</span>
+    </a>
+
+    <ul class="hidden lg:flex items-center gap-10 text-cream text-[13px] tracking-widest2 uppercase font-medium">
+      <li><a href="#home" class="nav-link">Home</a></li>
+      <li><a href="#shop" class="nav-link">Shop</a></li>
+      <li><a href="#collections" class="nav-link">Collections</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#gallery" class="nav-link">Gallery</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+
+    <div class="flex items-center gap-5 text-cream">
+      <button aria-label="Search" class="hover:text-gold transition-colors"><i class="fa-solid fa-magnifying-glass"></i></button>
+      <button aria-label="Wishlist" class="hover:text-gold transition-colors relative">
+        <i class="fa-regular fa-heart"></i>
+        <span class="absolute -top-2 -right-2 text-[10px] bg-gold text-ink rounded-full w-4 h-4 flex items-center justify-center">2</span>
+      </button>
+      <button aria-label="Shopping cart" class="hover:text-gold transition-colors relative">
+        <i class="fa-solid fa-bag-shopping"></i>
+        <span class="absolute -top-2 -right-2 text-[10px] bg-gold text-ink rounded-full w-4 h-4 flex items-center justify-center">3</span>
+      </button>
+      <button id="menuBtn" aria-label="Open menu" class="lg:hidden text-lg"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div id="mobileMenu" class="lg:hidden hidden glass mx-6 mt-4 rounded-2xl px-8 py-8">
+    <ul class="flex flex-col gap-6 text-cream uppercase tracking-widest2 text-sm">
+      <li><a href="#home" class="mobile-link">Home</a></li>
+      <li><a href="#shop" class="mobile-link">Shop</a></li>
+      <li><a href="#collections" class="mobile-link">Collections</a></li>
+      <li><a href="#about" class="mobile-link">About</a></li>
+      <li><a href="#gallery" class="mobile-link">Gallery</a></li>
+      <li><a href="#contact" class="mobile-link">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section id="home" class="relative min-h-screen flex items-center overflow-hidden bg-ink">
+  <div class="absolute inset-0">
+    <img src="https://picsum.photos/seed/abglamss-hero/1800/1200" alt="Woman wearing an AB Glamss evening gown" class="w-full h-full object-cover duo opacity-60">
+    <div class="absolute inset-0 bg-gradient-to-r from-ink via-ink/70 to-transparent"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-ink via-transparent to-ink/40"></div>
+  </div>
+
+  <!-- watermark monogram -->
+  <div class="absolute -right-10 top-1/2 -translate-y-1/2 watermark hidden md:block select-none pointer-events-none">AB</div>
+
+  <div class="absolute w-2.5 h-2.5 rounded-full bg-gold float-slow left-[12%] top-[28%]"></div>
+  <div class="absolute w-1.5 h-1.5 rounded-full bg-gold/70 float-slow2 left-[22%] top-[65%]"></div>
+  <div class="absolute w-2 h-2 rounded-full bg-gold/60 float-slow right-[30%] top-[20%]"></div>
+
+  <div class="relative z-10 max-w-[1440px] mx-auto px-6 lg:px-12 w-full pt-28">
+    <p data-hero="eyebrow" class="eyebrow uppercase text-gold mb-6 opacity-0">Essentials Elegance — YOU</p>
+    <h1 data-hero="title" class="font-display text-cream text-[13vw] leading-[0.95] md:text-7xl lg:text-8xl max-w-4xl opacity-0">
+      Luxury Fashion <br> That Defines <span class="gold-text italic">Your</span> Style
+    </h1>
+    <p data-hero="sub" class="text-cream/70 max-w-md mt-8 text-base md:text-lg font-light opacity-0">
+      Where elegance meets confidence. Considered pieces for the woman who dresses with intention.
+    </p>
+
+    <div data-hero="cta" class="flex flex-wrap gap-5 mt-10 opacity-0">
+      <a href="#shop" class="ripple btn-gold px-9 py-4 rounded-full text-sm tracking-widest2 uppercase font-medium transition-colors">Shop Now</a>
+      <a href="#collections" class="ripple btn-outline px-9 py-4 rounded-full text-sm tracking-widest2 uppercase font-medium transition-colors">Explore Collection</a>
+    </div>
+  </div>
+
+  <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-cream/60 z-10">
+    <span class="text-[10px] tracking-widest2 uppercase">Scroll</span>
+    <div class="w-px h-10 bg-gradient-to-b from-gold to-transparent"></div>
+  </div>
+</section>
+
+<!-- ============ FEATURED COLLECTIONS ============ -->
+<section id="collections" class="py-28 lg:py-36 bg-cream">
+  <div class="max-w-[1440px] mx-auto px-6 lg:px-12">
+    <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16" data-aos="fade-up">
+      <div>
+        <p class="eyebrow uppercase text-goldDeep mb-4">Curated For You</p>
+        <h2 class="font-display text-4xl md:text-5xl">Featured Collections</h2>
+      </div>
+      <p class="text-ink/60 max-w-sm font-light">Six edits, one philosophy — pieces that carry their elegance quietly, built to be worn again and again.</p>
+    </div>
+
+    <div class="grid grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6">
+      <!-- Card template x6 -->
+      <a href="#shop" class="lux-card group relative rounded-3xl overflow-hidden col-span-2 lg:col-span-1 lg:row-span-2 h-[420px] lg:h-full" data-aos="fade-up">
+        <div class="img-zoom h-full w-full"><img src="https://picsum.photos/seed/newarrivals/900/1200" alt="New Arrivals collection" class="w-full h-full object-cover duo"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/10 to-transparent"></div>
+        <div class="absolute bottom-7 left-7 right-7">
+          <p class="eyebrow text-gold uppercase mb-2">Just In</p>
+          <h3 class="font-display text-2xl text-cream">New Arrivals</h3>
+        </div>
+      </a>
+
+      <a href="#shop" class="lux-card group relative rounded-3xl overflow-hidden h-[260px] lg:h-[300px]" data-aos="fade-up" data-aos-delay="50">
+        <div class="img-zoom h-full w-full"><img src="https://picsum.photos/seed/luxurydresses/700/700" alt="Luxury dresses collection" class="w-full h-full object-cover duo"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/5 to-transparent"></div>
+        <div class="absolute bottom-6 left-6 right-6">
+          <h3 class="font-display text-xl text-cream">Luxury Dresses</h3>
+        </div>
+      </a>
+
+      <a href="#shop" class="lux-card group relative rounded-3xl overflow-hidden h-[260px] lg:h-[300px]" data-aos="fade-up" data-aos-delay="100">
+        <div class="img-zoom h-full w-full"><img src="https://picsum.photos/seed/eveningwear/700/701" alt="Eveningwear collection" class="w-full h-full object-cover duo"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/5 to-transparent"></div>
+        <div class="absolute bottom-6 left-6 right-6">
+          <h3 class="font-display text-xl text-cream">Evening Wear</h3>
+        </div>
+      </a>
+
+      <a href="#shop" class="lux-card group relative rounded-3xl overflow-hidden h-[260px] lg:h-[300px]" data-aos="fade-up" data-aos-delay="150">
+        <div class="img-zoom h-full w-full"><img src="https://picsum.photos/seed/shoescoll/700/702" alt="Shoes collection" class="w-full h-full object-cover duo"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/5 to-transparent"></div>
+        <div class="absolute bottom-6 left-6 right-6">
+          <h3 class="font-display text-xl text-cream">Shoes</h3>
+        </div>
+      </a>
+
+      <a href="#shop" class="lux-card group relative rounded-3xl overflow-hidden h-[260px] lg:h-[300px]" data-aos="fade-up" data-aos-delay="200">
+        <div class="img-zoom h-full w-full"><img src="https://picsum.photos/seed/handbagscoll/700/703" alt="Handbags collection" class="w-full h-full object-cover duo"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/5 to-transparent"></div>
+        <div class="absolute bottom-6 left-6 right-6">
+          <h3 class="font-display text-xl text-cream">Handbags</h3>
+        </div>
+      </a>
+
+      <a href="#shop" class="lux-card group relative rounded-3xl overflow-hidden h-[260px] lg:h-[300px]" data-aos="fade-up" data-aos-delay="250">
+        <div class="img-zoom h-full w-full"><img src="https://picsum.photos/seed/accessoriescoll/700/704" alt="Accessories collection" class="w-full h-full object-cover duo"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/5 to-transparent"></div>
+        <div class="absolute bottom-6 left-6 right-6">
+          <h3 class="font-display text-xl text-cream">Accessories</h3>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BEST SELLERS ============ -->
+<section id="shop" class="py-28 lg:py-36 bg-white relative">
+  <div class="max-w-[1440px] mx-auto px-6 lg:px-12">
+    <div class="text-center mb-16" data-aos="fade-up">
+      <p class="eyebrow uppercase text-goldDeep mb-4">Most Loved</p>
+      <h2 class="font-display text-4xl md:text-5xl">Best Sellers</h2>
+      <div class="gold-divider w-24 mx-auto mt-6"></div>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-8" id="productGrid">
+      <!-- Product card component repeated -->
+    </div>
+
+    <div class="text-center mt-16" data-aos="fade-up">
+      <a href="#" class="ripple inline-block border border-ink px-10 py-4 rounded-full text-sm tracking-widest2 uppercase hover:bg-ink hover:text-cream transition-colors">View All Products</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section id="about" class="py-28 lg:py-36 bg-card overflow-hidden">
+  <div class="max-w-[1440px] mx-auto px-6 lg:px-12 grid lg:grid-cols-2 gap-16 items-center">
+    <div class="relative" data-aos="fade-right">
+      <div class="rounded-[2rem] overflow-hidden aspect-[4/5] img-zoom">
+        <img src="https://picsum.photos/seed/founderabglamss/900/1100" alt="Founder of AB Glamss" class="w-full h-full object-cover duo">
+      </div>
+      <div class="absolute -bottom-8 -right-6 md:-right-10 glass rounded-2xl p-6 w-56 bg-ink/90">
+        <p class="font-display text-3xl gold-text">7+</p>
+        <p class="text-cream/70 text-xs tracking-wide mt-1">Years crafting considered luxury for UK women</p>
+      </div>
+    </div>
+
+    <div data-aos="fade-left">
+      <p class="eyebrow uppercase text-goldDeep mb-4">Our Story</p>
+      <h2 class="font-display text-4xl md:text-5xl leading-tight mb-8">Elegance Isn't Loud. <br> It's <span class="italic gold-text">Intentional.</span></h2>
+      <p class="text-ink/70 font-light leading-relaxed mb-6">
+        AB Glamss was founded on a simple belief: that a woman's wardrobe should feel as considered as she is. From our London studio, every piece is selected and finished with the same restraint — clean lines, honest fabrics, and details that reveal themselves slowly.
+      </p>
+      <p class="text-ink/70 font-light leading-relaxed mb-10">
+        We call it Essentials Elegance — a wardrobe built on fewer, better things, so that what you wear can simply be an extension of who you are.
+      </p>
+      <a href="#contact" class="ripple inline-block btn-gold px-9 py-4 rounded-full text-sm tracking-widest2 uppercase font-medium">Discover Our Story</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHY CHOOSE US ============ -->
+<section class="py-28 lg:py-32 bg-ink text-cream relative overflow-hidden">
+  <div class="absolute -left-24 -top-24 watermark hidden lg:block">AB</div>
+  <div class="max-w-[1440px] mx-auto px-6 lg:px-12 relative">
+    <div class="text-center mb-16" data-aos="fade-up">
+      <p class="eyebrow uppercase text-gold mb-4">The AB Glamss Standard</p>
+      <h2 class="font-display text-4xl md:text-5xl">Why Choose Us</h2>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6">
+      <div class="text-center px-4" data-aos="fade-up" data-aos-delay="0">
+        <div class="w-16 h-16 mx-auto rounded-full border border-gold flex items-center justify-center mb-6 icon-wrap">
+          <i class="fa-solid fa-gem text-gold text-xl"></i>
+        </div>
+        <h3 class="font-display text-xl mb-3">Premium Quality</h3>
+        <p class="text-cream/60 text-sm font-light leading-relaxed">Fabrics and finishes selected for how they wear, drape and last — not just how they photograph.</p>
+      </div>
+      <div class="text-center px-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="w-16 h-16 mx-auto rounded-full border border-gold flex items-center justify-center mb-6 icon-wrap">
+          <i class="fa-solid fa-truck-fast text-gold text-xl"></i>
+        </div>
+        <h3 class="font-display text-xl mb-3">UK Delivery</h3>
+        <p class="text-cream/60 text-sm font-light leading-relaxed">Fast, tracked delivery across the United Kingdom, beautifully packaged from studio to door.</p>
+      </div>
+      <div class="text-center px-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="w-16 h-16 mx-auto rounded-full border border-gold flex items-center justify-center mb-6 icon-wrap">
+          <i class="fa-solid fa-lock text-gold text-xl"></i>
+        </div>
+        <h3 class="font-display text-xl mb-3">Secure Payments</h3>
+        <p class="text-cream/60 text-sm font-light leading-relaxed">Encrypted checkout with trusted UK payment providers, every time you shop with us.</p>
+      </div>
+      <div class="text-center px-4" data-aos="fade-up" data-aos-delay="300">
+        <div class="w-16 h-16 mx-auto rounded-full border border-gold flex items-center justify-center mb-6 icon-wrap">
+          <i class="fa-solid fa-headset text-gold text-xl"></i>
+        </div>
+        <h3 class="font-display text-xl mb-3">Excellent Service</h3>
+        <p class="text-cream/60 text-sm font-light leading-relaxed">A personal styling team on hand by phone, email or DM — because service is part of the elegance.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section class="py-28 lg:py-32 bg-cream">
+  <div class="max-w-[1000px] mx-auto px-6 lg:px-12 text-center mb-14" data-aos="fade-up">
+    <p class="eyebrow uppercase text-goldDeep mb-4">Client Love</p>
+    <h2 class="font-display text-4xl md:text-5xl">What Our Women Say</h2>
+  </div>
+
+  <div class="swiper testiSwiper max-w-3xl mx-auto px-6" data-aos="fade-up">
+    <div class="swiper-wrapper pb-14">
+      <div class="swiper-slide">
+        <div class="text-center">
+          <div class="w-16 h-16 rounded-full overflow-hidden mx-auto mb-5 border-2 border-gold"><img src="https://picsum.photos/seed/client-amara/200/200" alt="Amara O." class="w-full h-full object-cover"></div>
+          <div class="text-gold mb-4"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+          <p class="font-display italic text-xl md:text-2xl leading-relaxed mb-6">"Every piece feels like it was made to be kept, not worn once and forgotten. AB Glamss is the first brand that's made me slow down my wardrobe."</p>
+          <p class="text-sm tracking-widest2 uppercase text-ink/50">Amara O. — London</p>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="text-center">
+          <div class="w-16 h-16 rounded-full overflow-hidden mx-auto mb-5 border-2 border-gold"><img src="https://picsum.photos/seed/client-freya/200/200" alt="Freya M." class="w-full h-full object-cover"></div>
+          <div class="text-gold mb-4"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+          <p class="font-display italic text-xl md:text-2xl leading-relaxed mb-6">"The eveningwear edit sold me instantly. Beautiful tailoring, and the customer service made ordering effortless."</p>
+          <p class="text-sm tracking-widest2 uppercase text-ink/50">Freya M. — Manchester</p>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="text-center">
+          <div class="w-16 h-16 rounded-full overflow-hidden mx-auto mb-5 border-2 border-gold"><img src="https://picsum.photos/seed/client-ronke/200/200" alt="Ronke A." class="w-full h-full object-cover"></div>
+          <div class="text-gold mb-4"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+          <p class="font-display italic text-xl md:text-2xl leading-relaxed mb-6">"Understated, elegant, and genuinely well made. My AB Glamss handbag gets more compliments than anything else I own."</p>
+          <p class="text-sm tracking-widest2 uppercase text-ink/50">Ronke A. — Birmingham</p>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+</section>
+
+<!-- ============ INSTAGRAM GALLERY ============ -->
+<section id="gallery" class="py-28 lg:py-32 bg-white">
+  <div class="max-w-[1440px] mx-auto px-6 lg:px-12">
+    <div class="text-center mb-14" data-aos="fade-up">
+      <p class="eyebrow uppercase text-goldDeep mb-4">@ab.glamss</p>
+      <h2 class="font-display text-4xl md:text-5xl">Follow Our World</h2>
+    </div>
+
+    <div class="columns-2 md:columns-4 gap-4 space-y-4">
+      <div class="break-inside-avoid rounded-2xl overflow-hidden img-zoom relative group" data-aos="zoom-in">
+        <img src="https://picsum.photos/seed/gal1/500/650" alt="Instagram post" class="w-full duo">
+        <div class="absolute inset-0 bg-ink/0 group-hover:bg-ink/40 transition-colors flex items-center justify-center"><i class="fa-brands fa-instagram text-2xl text-cream opacity-0 group-hover:opacity-100 transition-opacity"></i></div>
+      </div>
+      <div class="break-inside-avoid rounded-2xl overflow-hidden img-zoom relative group" data-aos="zoom-in" data-aos-delay="50">
+        <img src="https://picsum.photos/seed/gal2/500/500" alt="Instagram post" class="w-full duo">
+        <div class="absolute inset-0 bg-ink/0 group-hover:bg-ink/40 transition-colors flex items-center justify-center"><i class="fa-brands fa-instagram text-2xl text-cream opacity-0 group-hover:opacity-100 transition-opacity"></i></div>
+      </div>
+      <div class="break-inside-avoid rounded-2xl overflow-hidden img-zoom relative group" data-aos="zoom-in" data-aos-delay="100">
+        <img src="https://picsum.photos/seed/gal3/500/700" alt="Instagram post" class="w-full duo">
+        <div class="absolute inset-0 bg-ink/0 group-hover:bg-ink/40 transition-colors flex items-center justify-center"><i class="fa-brands fa-instagram text-2xl text-cream opacity-0 group-hover:opacity-100 transition-opacity"></i></div>
+      </div>
+      <div class="break-inside-avoid rounded-2xl overflow-hidden img-zoom relative group" data-aos="zoom-in" data-aos-delay="150">
+        <img src="https://picsum.photos/seed/gal4/500/560" alt="Instagram post" class="w-full duo">
+        <div class="absolute inset-0 bg-ink/0 group-hover:bg-ink/40 transition-colors flex items-center justify-center"><i class="fa-brands fa-instagram text-2xl text-cream opacity-0 group-hover:opacity-100 transition-opacity"></i></div>
+      </div>
+      <div class="break-inside-avoid rounded-2xl overflow-hidden img-zoom relative group" data-aos="zoom-in" data-aos-delay="200">
+        <img src="https://picsum.photos/seed/gal5/500/620" alt="Instagram post" class="w-full duo">
+        <div class="absolute inset-0 bg-ink/0 group-hover:bg-ink/40 transition-colors flex items-center justify-center"><i class="fa-brands fa-instagram text-2xl text-cream opacity-0 group-hover:opacity-100 transition-opacity"></i></div>
+      </div>
+      <div class="break-inside-avoid rounded-2xl overflow-hidden img-zoom relative group" data-aos="zoom-in" data-aos-delay="250">
+        <img src="https://picsum.photos/seed/gal6/500/500" alt="Instagram post" class="w-full duo">
+        <div class="absolute inset-0 bg-ink/0 group-hover:bg-ink/40 transition-colors flex items-center justify-center"><i class="fa-brands fa-instagram text-2xl text-cream opacity-0 group-hover:opacity-100 transition-opacity"></i></div>
+      </div>
+      <div class="break-inside-avoid rounded-2xl overflow-hidden img-zoom relative group" data-aos="zoom-in" data-aos-delay="300">
+        <img src="https://picsum.photos/seed/gal7/500/680" alt="Instagram post" class="w-full duo">
+        <div class="absolute inset-0 bg-ink/0 group-hover:bg-ink/40 transition-colors flex items-center justify-center"><i class="fa-brands fa-instagram text-2xl text-cream opacity-0 group-hover:opacity-100 transition-opacity"></i></div>
+      </div>
+      <div class="break-inside-avoid rounded-2xl overflow-hidden img-zoom relative group" data-aos="zoom-in" data-aos-delay="350">
+        <img src="https://picsum.photos/seed/gal8/500/540" alt="Instagram post" class="w-full duo">
+        <div class="absolute inset-0 bg-ink/0 group-hover:bg-ink/40 transition-colors flex items-center justify-center"><i class="fa-brands fa-instagram text-2xl text-cream opacity-0 group-hover:opacity-100 transition-opacity"></i></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ NEWSLETTER ============ -->
+<section class="relative py-24 lg:py-28 overflow-hidden" style="background:linear-gradient(120deg,#A9822C,#D4AF37 45%,#E7CD7A 100%);">
+  <div class="absolute -right-16 -bottom-16 watermark text-ink/10 hidden md:block">AB</div>
+  <div class="max-w-2xl mx-auto px-6 text-center relative" data-aos="fade-up">
+    <p class="eyebrow uppercase text-ink/70 mb-4">Join The Inner Circle</p>
+    <h2 class="font-display text-4xl md:text-5xl text-ink mb-5">Stay In Style</h2>
+    <p class="text-ink/70 font-light mb-10">Be first to know about new arrivals, private sales, and styling notes from the AB Glamss studio.</p>
+    <form class="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto" onsubmit="event.preventDefault(); this.querySelector('button').innerHTML='<i class=\'fa-solid fa-check\'></i> Subscribed'">
+      <label for="newsletterEmail" class="sr-only">Email address</label>
+      <input id="newsletterEmail" type="email" required placeholder="Your email address" class="flex-1 px-6 py-4 rounded-full bg-ink/90 text-cream placeholder-cream/50 border border-ink focus:outline-none">
+      <button type="submit" class="ripple bg-ink text-cream px-8 py-4 rounded-full text-sm tracking-widest2 uppercase font-medium hover:bg-ink/80 transition-colors whitespace-nowrap">Subscribe</button>
+    </form>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer id="contact" class="bg-ink text-cream pt-20 pb-8">
+  <div class="max-w-[1440px] mx-auto px-6 lg:px-12">
+    <div class="grid md:grid-cols-4 gap-12 mb-14">
+      <div>
+        <a href="#home" class="font-display text-2xl tracking-widest">AB <span class="gold-text">Glamss</span></a>
+        <p class="text-cream/50 text-sm font-light mt-5 leading-relaxed">Essentials Elegance — YOU. <br>A London luxury fashion house for the considered woman.</p>
+        <div class="flex gap-4 mt-6 text-lg">
+          <a href="https://www.tiktok.com/@ab.glamss" aria-label="TikTok" class="w-10 h-10 rounded-full border border-gold/40 flex items-center justify-center hover:bg-gold hover:text-ink transition-colors"><i class="fa-brands fa-tiktok text-sm"></i></a>
+          <a href="https://www.instagram.com/ab.glamss" aria-label="Instagram" class="w-10 h-10 rounded-full border border-gold/40 flex items-center justify-center hover:bg-gold hover:text-ink transition-colors"><i class="fa-brands fa-instagram text-sm"></i></a>
+          <a href="https://www.facebook.com/ABGlamss" aria-label="Facebook" class="w-10 h-10 rounded-full border border-gold/40 flex items-center justify-center hover:bg-gold hover:text-ink transition-colors"><i class="fa-brands fa-facebook-f text-sm"></i></a>
+          <a href="#" aria-label="Snapchat" class="w-10 h-10 rounded-full border border-gold/40 flex items-center justify-center hover:bg-gold hover:text-ink transition-colors"><i class="fa-brands fa-snapchat text-sm"></i></a>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="eyebrow uppercase text-gold mb-6">Quick Links</h4>
+        <ul class="space-y-3 text-cream/60 text-sm font-light">
+          <li><a href="#home" class="hover:text-gold transition-colors">Home</a></li>
+          <li><a href="#shop" class="hover:text-gold transition-colors">Shop</a></li>
+          <li><a href="#collections" class="hover:text-gold transition-colors">Collections</a></li>
+          <li><a href="#about" class="hover:text-gold transition-colors">About Us</a></li>
+          <li><a href="#gallery" class="hover:text-gold transition-colors">Gallery</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="eyebrow uppercase text-gold mb-6">Client Care</h4>
+        <ul class="space-y-3 text-cream/60 text-sm font-light">
+          <li><a href="#" class="hover:text-gold transition-colors">Delivery &amp; Returns</a></li>
+          <li><a href="#" class="hover:text-gold transition-colors">Size Guide</a></li>
+          <li><a href="#" class="hover:text-gold transition-colors">Track My Order</a></li>
+          <li><a href="#" class="hover:text-gold transition-colors">Privacy Policy</a></li>
+          <li><a href="#" class="hover:text-gold transition-colors">Terms &amp; Conditions</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="eyebrow uppercase text-gold mb-6">Get In Touch</h4>
+        <ul class="space-y-3 text-cream/60 text-sm font-light">
+          <li class="flex items-center gap-3"><i class="fa-solid fa-phone text-gold"></i> +44 7544 557811</li>
+          <li class="flex items-center gap-3"><i class="fa-solid fa-envelope text-gold"></i> hello@abglamss.com</li>
+          <li class="flex items-center gap-3"><i class="fa-solid fa-location-dot text-gold"></i> London, United Kingdom</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="gold-divider mb-8"></div>
+
+    <div class="flex flex-col md:flex-row items-center justify-between gap-4 text-cream/40 text-xs">
+      <p>&copy; <span id="year"></span> AB Glamss. All rights reserved.</p>
+      <p class="tracking-widest2 uppercase">Essentials Elegance — YOU</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ SCRIPTS ============ -->
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>gsap.registerPlugin(ScrollTrigger);</script>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+
+/* ---------- Loader ---------- */
+window.addEventListener('load', () => {
+  const tl = gsap.timeline({ onComplete: () => {
+    document.getElementById('loader').style.display = 'none';
+    heroIntro();
+  }});
+  tl.to('#loaderMark', { opacity: 1, duration: .6, ease: 'power2.out' })
+    .to('#loaderRule', { width: 90, duration: .5, ease: 'power2.out' }, '-=.2')
+    .to('#loader', { opacity: 0, duration: .6, delay: .3, ease: 'power2.inOut' })
+    .set('#loader', { display: 'none' });
+});
+
+/* ---------- Hero entrance ---------- */
+function heroIntro(){
+  gsap.timeline()
+    .to('[data-hero="eyebrow"]', { opacity: 1, y: 0, duration: .8, ease:'power3.out' }, .1)
+    .fromTo('[data-hero="title"]', {opacity:0,y:40}, { opacity: 1, y: 0, duration: 1, ease:'power3.out' }, .2)
+    .fromTo('[data-hero="sub"]', {opacity:0,y:30}, { opacity: 1, y: 0, duration: .9, ease:'power3.out' }, .5)
+    .fromTo('[data-hero="cta"]', {opacity:0,y:20}, { opacity: 1, y: 0, duration: .8, ease:'power3.out' }, .7);
+}
+
+/* ---------- AOS ---------- */
+AOS.init({ duration: 900, once: true, easing: 'ease-out-cubic', offset: 60 });
+
+/* ---------- Sticky nav ---------- */
+const nav = document.getElementById('mainNav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 60);
+});
+
+/* ---------- Mobile menu ---------- */
+const menuBtn = document.getElementById('menuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+menuBtn.addEventListener('click', () => {
+  const isHidden = mobileMenu.classList.contains('hidden');
+  mobileMenu.classList.toggle('hidden');
+  menuBtn.innerHTML = isHidden ? '<i class="fa-solid fa-xmark"></i>' : '<i class="fa-solid fa-bars"></i>';
+});
+document.querySelectorAll('.mobile-link').forEach(l => l.addEventListener('click', () => {
+  mobileMenu.classList.add('hidden');
+  menuBtn.innerHTML = '<i class="fa-solid fa-bars"></i>';
+}));
+
+/* ---------- Ripple buttons ---------- */
+document.querySelectorAll('.ripple').forEach(btn => {
+  btn.addEventListener('click', function(e){
+    const r = document.createElement('span');
+    r.className = 'rip';
+    const rect = this.getBoundingClientRect();
+    const size = Math.max(rect.width, rect.height);
+    r.style.width = r.style.height = size + 'px';
+    r.style.left = (e.clientX - rect.left - size/2) + 'px';
+    r.style.top = (e.clientY - rect.top - size/2) + 'px';
+    this.appendChild(r);
+    setTimeout(() => r.remove(), 650);
+  });
+});
+
+/* ---------- Custom cursor ---------- */
+const dot = document.getElementById('cursorDot');
+const ring = document.getElementById('cursorRing');
+window.addEventListener('mousemove', e => {
+  dot.style.left = e.clientX + 'px'; dot.style.top = e.clientY + 'px';
+  gsap.to(ring, { left: e.clientX, top: e.clientY, duration: .35, ease:'power3.out' });
+});
+document.querySelectorAll('a, button').forEach(el => {
+  el.addEventListener('mouseenter', () => { ring.style.width='54px'; ring.style.height='54px'; ring.style.opacity='.6'; });
+  el.addEventListener('mouseleave', () => { ring.style.width='34px'; ring.style.height='34px'; ring.style.opacity='1'; });
+});
+
+/* ---------- Testimonials Swiper ---------- */
+new Swiper('.testiSwiper', {
+  loop: true,
+  autoplay: { delay: 5500, disableOnInteraction: false },
+  pagination: { el: '.swiper-pagination', clickable: true },
+  speed: 700,
+});
+
+/* ---------- Best sellers: generate product cards ---------- */
+const products = [
+  { name: 'Aurelia Silk Gown', price: 289, cat: 'evening', seed: 'p1', rating: 5 },
+  { name: 'Noir Tailored Blazer', price: 219, cat: 'ready', seed: 'p2', rating: 4 },
+  { name: 'Gilded Clutch Bag', price: 165, cat: 'bags', seed: 'p3', rating: 5 },
+  { name: 'Ivory Wrap Dress', price: 199, cat: 'dresses', seed: 'p4', rating: 5 },
+  { name: 'Étoile Heeled Sandals', price: 179, cat: 'shoes', seed: 'p5', rating: 4 },
+  { name: 'Champagne Satin Set', price: 249, cat: 'evening', seed: 'p6', rating: 5 },
+  { name: '18k Gold-Plated Hoops', price: 89,  cat: 'accessories', seed: 'p7', rating: 5 },
+  { name: 'Corsetted Midi Dress', price: 229, cat: 'dresses', seed: 'p8', rating: 4 },
+];
+
+const grid = document.getElementById('productGrid');
+grid.innerHTML = products.map(p => `
+  <div class="lux-card group rounded-3xl bg-cream overflow-hidden" data-aos="fade-up">
+    <div class="relative img-zoom aspect-[3/4]">
+      <img src="https://picsum.photos/seed/${p.seed}/600/800" alt="${p.name}" class="w-full h-full object-cover duo">
+      <button aria-label="Add ${p.name} to wishlist" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-white/90 flex items-center justify-center hover:bg-gold transition-colors">
+        <i class="fa-regular fa-heart text-sm"></i>
+      </button>
+      <div class="absolute inset-x-4 bottom-4 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300">
+        <button class="w-full bg-ink text-cream text-xs tracking-widest2 uppercase py-3 rounded-full hover:bg-gold hover:text-ink transition-colors">Quick View</button>
+      </div>
+    </div>
+    <div class="p-5">
+      <p class="text-[11px] uppercase tracking-widest2 text-goldDeep mb-1">${p.cat}</p>
+      <h3 class="font-display text-lg mb-1">${p.name}</h3>
+      <div class="flex items-center justify-between mt-2">
+        <span class="font-medium">£${p.price}</span>
+        <span class="text-gold text-xs">${'★'.repeat(p.rating)}${'☆'.repeat(5-p.rating)}</span>
+      </div>
+      <button class="ripple mt-4 w-full border border-ink py-3 rounded-full text-xs tracking-widest2 uppercase hover:bg-ink hover:text-cream transition-colors relative overflow-hidden">Add to Cart</button>
+    </div>
+  </div>
+`).join('');
+// re-init ripple for dynamically injected buttons
+grid.querySelectorAll('.ripple').forEach(btn => {
+  btn.addEventListener('click', function(e){
+    const r = document.createElement('span'); r.className='rip';
+    const rect = this.getBoundingClientRect(); const size = Math.max(rect.width, rect.height);
+    r.style.width = r.style.height = size + 'px';
+    r.style.left = (e.clientX - rect.left - size/2) + 'px';
+    r.style.top = (e.clientY - rect.top - size/2) + 'px';
+    this.appendChild(r); setTimeout(() => r.remove(), 650);
+  });
+});
+
+/* ---------- Parallax on hero image ---------- */
+gsap.to('#home img', {
+  yPercent: 12,
+  ease: 'none',
+  scrollTrigger: { trigger: '#home', start: 'top top', end: 'bottom top', scrub: true }
+});
+</script>
+</body>
+</html>
